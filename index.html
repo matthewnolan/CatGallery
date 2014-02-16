@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en" ng-app="mobileGallery">
+<head>
+  <meta charset="utf-8">
+  <title>Image Gallery</title>
+
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="PhotoGallery">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+  <!-- Off the shelf CSS animation libraries -->
+  <link href="css/css-justin.css" rel="stylesheet" />
+  <link href="css/animate.css" rel="stylesheet" />
+
+  <!-- The apps stylesheet -->
+  <link href="css/style.css" rel="stylesheet" />
+
+</head>
+
+<body ng-controller="MainCtrl" class="my-slide-container content">
+
+  <div ng-view class="page " route-transition ng-class="ng-view"></div>
+
+
+  <!--
+  <script src="http://code.angularjs.org/1.2.0rc1/angular.min.js"></script>
+  <script src="http://code.angularjs.org/1.2.0rc1/angular-animate.min.js"></script>
+  <script src="http://code.angularjs.org/1.2.0rc1/angular-resource.min.js"></script>
+  <script src="http://code.angularjs.org/1.2.0rc1/angular-route.js"></script>
+  <script src="http://code.angularjs.org/1.2.0rc1/angular-touch.min.js"></script>
+  -->
+
+  <script src="lib/jquery-2.1.0.min.js"></script>
+
+  <!-- Angular JS -->
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular/angular-animate.min.js"></script>
+  <script src="lib/angular/angular-resource.min.js"></script>
+  <script src="lib/angular/angular-route.min.js"></script>
+  <script src="lib/angular/angular-touch.min.js"></script>
+
+  <!-- TweenMan for animations in the modal view -->
+  <script src="lib/TweenMax.min.js"></script>
+
+  <!-- Hammer.js for better touch events -->
+  <script src="lib/hammer.min.js"></script>
+  <script src="lib/angular-hammer.js"></script>
+
+
+  <script src="js/app.js"></script>
+  <script src="js/services.js"></script>
+  <script src="js/controllers.js"></script>
+  <script src="js/filters.js"></script>
+  <script src="js/directives.js"></script>
+
+  <!-- 
+  Image gallery mobile web app.
+  From Matthew Nolan
+
+  Drop me a line, sometime.
+
+  matthewnolan415@gmail.com
+  877-370-2564
+  www.buildbuildbuild.com
+  @redbuttonnyc 
+  -->
+
+</body>
+</html>

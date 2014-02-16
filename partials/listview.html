@@ -1,0 +1,19 @@
+<div class="modalheader" id="listview">
+  <h1 class="imgtitle">Image gallery<h1>
+</div>
+
+<div id="background">
+  <div class="container" id="foreground">
+
+    <div id="effectselect">
+      <label for="effectselect">Transition animations</label>
+      <select name="effectselect" class="form-control" ng-model="effect" ng-change="setEffect(effect)" ng-options="e.className as e.name for e in effects"></select> 
+    </div>
+
+    <ul class="nav">
+      <li ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="photo in photos" ng-class="{'active':isActive($index)}" >
+        <img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index); changeView($index)" >
+      </li>
+    </ul>
+  </div>
+</div>
