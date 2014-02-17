@@ -6,10 +6,10 @@
 
 	</div>
 
-    <div class="photoholder pulse navAnimations" >
-        <div ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext(photo)" ng-show="isActive($index)" back-img="{{photo.src}}" hm-tap="toggleCustom()" hm-swipeup="toggleClose()" ng-class="{active: isActive($index)}">
-        </div>
-    </div>
+	<div class="photoholder pulse navAnimations" >
+		<div ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext(photo)" ng-show="isActive($index)" back-img="{{photo.src}}" hm-tap="toggleCustom()" hm-swipeup="toggleClose()" ng-class="{active: isActive($index)}">
+		</div>
+	</div>
 
 	<div class="modalfooter navAnimations" >
 		<button><span class="icon iconPlus"></span></button>

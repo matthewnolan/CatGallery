@@ -6,10 +6,13 @@ Built with Angular.js.
 Hammer.js for mobile events
 TweenMax for modal animations.
 
+See it in action:
+[buildbuildbuild.net/catgallery](buildbuildbuild.net/catgallery)
 
 
 
-Many thanks to:
+
+##Many thanks to:
 
 [Daneden's CSS animations](https://github.com/daneden/animate.css)
 
