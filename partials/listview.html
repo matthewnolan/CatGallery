@@ -1,16 +1,26 @@
-<div class="modalheader" id="listview">
-	<h1 class="imgtitle">Cat gallery
-		<h1>
+<div class="navbar navbar-default navbar-static-top" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="#">Cat Gallery</a>
+		</div>
+		<div class=" navbar-collapse collapse navbar-form navbar-right">
+
+			<div id="effectselect" class="">
+				<!-- <label for="effectselect">Transition animations</label> -->
+				<select name="effectselect" class="form-control" ng-model="effect" ng-change="setEffect(effect)" ng-options="e.className as e.name for e in effects"></select>
+			</div>
+		</div>
+	</div>
 </div>
 
 <div id="background">
 	<div class="container" id="foreground">
-
-		<div id="effectselect">
-			<label for="effectselect">Transition animations</label>
-			<select name="effectselect" class="form-control" ng-model="effect" ng-change="setEffect(effect)" ng-options="e.className as e.name for e in effects"></select>
-		</div>
-
 		<ul class="nav">
 			<li ng-animate="{enter: 'animate-enter', leave: 'animate-leave'}" ng-repeat="photo in photos" ng-class="{'active':isActive($index)}">
 				<img ng-src="{{photo.src}}" alt="{{photo.desc}}" title="{{photo.desc}}" ng-click="showPhoto($index); changeView($index)">
@@ -18,7 +28,8 @@
 		</ul>
 		<footer>
 			<p>&copy; 2014 Matthew Nolan</p>
-			<p><a href="https://github.com/matthewnolan/CatGallery" target="_blank">CatCallery on Github</a></p>
+			<p><a href="https://github.com/matthewnolan/CatGallery" target="_blank">CatCallery on Github</a>
+			</p>
 		</footer>
 	</div>
 </div>

@@ -1,21 +1,35 @@
 <div id="photomodal" class="modalopen" ng-class="{modalHeaderToggle: custom}">
 
 	<div class="modalheader navAnimations" id="modalview">
-		<h1 class="imgtitle" ng-repeat="photo in photos" ng-show="isActive($index)">{{photo.desc}}</h1>
-		<button ng-click="toggleClose()" class="headclose imgtitle"><span class="icon iconClose"></span></button>
+		<div class="col-xs-10 col-xs-push-1 text-center">
+			<span class="imgtitle" ng-repeat="photo in photos" ng-show="isActive($index)">{{photo.desc}}</span>
+		</div>
+		<div class="col-xs-1 text-right">
+			<button ng-click="toggleClose()" class="headclose imgtitle">
+				<span class="ion-close-circled"></span>
+			</button>
 
+		</div>
 	</div>
 
-	<div class="photoholder pulse navAnimations" >
+	<div class="photoholder pulse navAnimations">
 		<div ng-repeat="photo in photos" class="slide" ng-swipe-right="showPrev()" ng-swipe-left="showNext(photo)" ng-show="isActive($index)" back-img="{{photo.src}}" hm-tap="toggleCustom()" hm-swipeup="toggleClose()" ng-class="{active: isActive($index)}">
 		</div>
 	</div>
 
-	<div class="modalfooter navAnimations" >
-		<button><span class="icon iconPlus"></span></button>
-		<button><span class="icon iconMessage"></span></button>
-		<button><span class="icon iconAdd"></span></button>
-		<button><span class="icon iconShare"></span></button>
+	<div class="modalfooter navAnimations">
+		<button>
+			<span class="ion-social-dropbox"></span>
+		</button>
+		<button>
+			<span class="ion-chatbox-working"></span>
+		</button>
+		<button>
+			<span class="ion-flash"></span>
+		</button>
+		<button>
+			<span class="ion-ios7-redo"></span>
+		</button>
 	</div>
 
-</div>    
+</div>
